@@ -1,0 +1,605 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Init_AmazonConfig" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>762.4,1838.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Init_AmazonConfig_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="715.2,1773.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,1684.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="bo_CheckTrue" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence DisplayName="Init_AmazonConfig" sap:VirtualizedContainerService.HintSize="616,1430.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="553.6,1341.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberInit&quot;))]" RetryInterval="5.00:00:00">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,1133.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="True" DisplayName="KillAllProcesses - Invoke Workflow File (Framework\KillAllProcesses.xaml)" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="449.6,988" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V2" WindowResize="Maximize">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,708" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="ui:UiElement" Name="ui_Dismiss" />
+                            <Variable x:TypeArguments="ui:UiElement" Name="ui_SaveChanges" />
+                            <Variable x:TypeArguments="x:String" Name="str_Languaje" />
+                            <Variable x:TypeArguments="ui:UiElement" Name="ui_English" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NCheckState DisplayName="Check App State 'Type the'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,376.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Warn" Message="[&quot;Pagina solicita atender autenticacion&quot;]" />
+                                <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" Caption="[in_Config(&quot;Authenticator_1&quot;).ToString]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[in_Config(&quot;Authenticator_2&quot;).ToString]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:MessageBox>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Pagina no solicita atender autenticacion&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/" DesignTimeRectangle="797, 543, 323, 58" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' aaname='*ype the characters*' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H4' class='' aaname='Type the characters you see in this image:' check:innerText='Type the characters you see in this image:' /&gt;" Guid="939c184b-bed7-4e9e-8cc5-ba354fdcb887" InformativeScreenshot="894fa11eb5e0494f26747b37de061b25.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <uix:NCheckState DisplayName="Check App State 'INPUT'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" OutUiElement="[ui_Dismiss]" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,316" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="[ui_Dismiss]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;clicking Dismiss pop up&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;No pop up detected&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/Officemate-26092-Letter-Recycled-Black/dp/B003G4MNUW/?_encoding=UTF8&amp;_ref=dlx_gate_sd_dcl_tlt_59c541b0_dt&amp;pd_rd_w=jLN8Q&amp;content-id=amzn1.sym.81a68cec-8afc-4296-99f7-78cf5ddc15b5&amp;pf_rd_p=81a68cec-8afc-4296-99f7-78cf5ddc15b5&amp;pf_rd_r=2QVJ5A934TS0CZGC7TJR&amp;pd_rd_wg=qJq5x&amp;pd_rd_r=91a44954-47ba-4559-9e57-788901623031&amp;ref_=pd_gw_unk" CVScreenId="d26311e5-5b8f-4287-b96b-7c6dde4800c1" CvElementArea="444, 316, 88, 43" CvTextArea="460, 330, 56, 15" CvTextArgument="Dismiss" CvType="Button" DesignTimeRectangle="448, 321, 81, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='*-autoid-39*' tag='*' type='*' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aria-labelledby='a-autoid-39-announce' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="561b9a45-b68b-4650-8687-719a850dd727" InformativeScreenshot="85ae788043db71809c7170af99fae474.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <ui:Hover DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DelayBefore="2000" DisplayName="Hover 'SPAN'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="Hover_1">
+                            <ui:Hover.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Hover.CursorPosition>
+                            <ui:Hover.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99f813ad-ecd7-49e8-b3d7-1719af190b1a" InformativeScreenshot="62936b529e0c6a7732a5ab636912055e" Selector="&lt;webctrl parentid='icp-nav-flyout' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Hover.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:Hover>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cambiar'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/hz/cs/help?ref_=icp_language_help&amp;nodeId=GARKQZZYZ542RGWK" CVScreenId="88e2f749-7ebe-4309-bbc6-fe7a7d3a15f2" CvTextArea="1617, 690, 58, 13" CvTextArgument="Cambiar" CvType="Text" DesignTimeRectangle="1619, 689, 56, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='icp-flyout-change' parentid='nav-flyout-icp' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='icp-flyout-change' parentid='nav-flyout-icp' tag='A' type='' aaname='Cambiar' check:innerText='Cambiar' /&gt;" Guid="7b6e8df3-6fef-4812-bd7b-c40a9047a23f" InformativeScreenshot="801fe0b3aa59e424207893bb41a23fc1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'INPUT'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" OutUiElement="[ui_Dismiss]" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,292.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,84.8" sap2010:WorkflowViewState.IdRef="NClick_3" InUiElement="[ui_Dismiss]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NClick>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;clicking Dismiss pop up&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,208" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;No pop up detected&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/Officemate-26092-Letter-Recycled-Black/dp/B003G4MNUW/?_encoding=UTF8&amp;_ref=dlx_gate_sd_dcl_tlt_59c541b0_dt&amp;pd_rd_w=jLN8Q&amp;content-id=amzn1.sym.81a68cec-8afc-4296-99f7-78cf5ddc15b5&amp;pf_rd_p=81a68cec-8afc-4296-99f7-78cf5ddc15b5&amp;pf_rd_r=2QVJ5A934TS0CZGC7TJR&amp;pd_rd_wg=qJq5x&amp;pd_rd_r=91a44954-47ba-4559-9e57-788901623031&amp;ref_=pd_gw_unk" CVScreenId="d26311e5-5b8f-4287-b96b-7c6dde4800c1" CvElementArea="444, 316, 88, 43" CvTextArea="460, 330, 56, 15" CvTextArgument="Dismiss" CvType="Button" DesignTimeRectangle="448, 321, 81, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='*-autoid-39*' tag='*' type='*' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl aria-labelledby='a-autoid-39-announce' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="561b9a45-b68b-4650-8687-719a850dd727" InformativeScreenshot="85ae788043db71809c7170af99fae474.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" FoundElement="[ui_English]" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                            <ui:WaitUiElementAppear.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dfd07c46-5538-49e3-8938-0fd634cbe8f2" InformativeScreenshot="612c6da421976a79ce555591fb317da6" Selector="&lt;webctrl parentid='icp-language-settings' tag='DIV' visibleinnertext='English - EN' idx='2' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:WaitUiElementAppear.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:WaitUiElementAppear>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_4" InUiElement="[ui_English]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NSelectItem DisplayName="Select Item '£ - GBP - British Pound'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="CLP - Chilean Peso" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="50">
+                                <x:String>Select Currency</x:String>
+                                <x:String>$ - USD - US Dollar (Default)</x:String>
+                                <x:String>CLP - Chilean Peso</x:String>
+                                <x:String>COP - Colombian Peso</x:String>
+                                <x:String>HK$ - HKD - Hong Kong Dollar</x:String>
+                                <x:String>IDR - Indonesian Rupiah</x:String>
+                                <x:String>₪ - ILS - Israeli New Shekel</x:String>
+                                <x:String>₩ - KRW - South Korean Won</x:String>
+                                <x:String>MYR - Malaysian Ringgit</x:String>
+                                <x:String>NZ$ - NZD - New Zealand Dollar</x:String>
+                                <x:String>THB - Thai Baht</x:String>
+                                <x:String>NT$ - TWD - New Taiwan Dollar</x:String>
+                                <x:String>CRC - Costa Rican Colón</x:String>
+                                <x:String>PEN - Peruvian Sol</x:String>
+                                <x:String>UYU - Uruguayan Peso</x:String>
+                                <x:String>R$ - BRL - Brazilian Real</x:String>
+                                <x:String>A$ - AUD - Australian Dollar</x:String>
+                                <x:String>CA$ - CAD - Canadian Dollar</x:String>
+                                <x:String>CN¥ - CNY - Chinese Yuan</x:String>
+                                <x:String>€ - EUR - Euro</x:String>
+                                <x:String>¥ - JPY - Japanese Yen</x:String>
+                                <x:String>MX$ - MXN - Mexican Peso</x:String>
+                                <x:String>£ - GBP - British Pound</x:String>
+                                <x:String>AED - United Arab Emirates Dirham</x:String>
+                                <x:String>SGD - Singapore Dollar</x:String>
+                                <x:String>SAR - Saudi Riyal</x:String>
+                                <x:String>NOK - Norwegian Krone</x:String>
+                                <x:String>ARS - Argentine Peso</x:String>
+                                <x:String>AMD - Armenian Dram</x:String>
+                                <x:String>AWG - Aruban Florin</x:String>
+                                <x:String>AZN - Azerbaijani Manat</x:String>
+                                <x:String>BSD - Bahamian Dollar</x:String>
+                                <x:String>BZD - Belize Dollar</x:String>
+                                <x:String>BOB - Bolivian Boliviano</x:String>
+                                <x:String>BND - Brunei Dollar</x:String>
+                                <x:String>BGN - Bulgarian Lev</x:String>
+                                <x:String>KHR - Cambodian Riel</x:String>
+                                <x:String>KYD - Cayman Islands Dollar</x:String>
+                                <x:String>DOP - Dominican Peso</x:String>
+                                <x:String>EC$ - XCD - East Caribbean Dollar</x:String>
+                                <x:String>EGP - Egyptian Pound</x:String>
+                                <x:String>GHS - Ghanaian Cedi</x:String>
+                                <x:String>GTQ - Guatemalan Quetzal</x:String>
+                                <x:String>HUF - Hungarian Forint</x:String>
+                                <x:String>₹ - INR - Indian Rupee</x:String>
+                                <x:String>JMD - Jamaican Dollar</x:String>
+                                <x:String>KZT - Kazakhstani Tenge</x:String>
+                                <x:String>KES - Kenyan Shilling</x:String>
+                                <x:String>LBP - Lebanese Pound</x:String>
+                                <x:String>HNL - Honduran Lempira</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/customer-preferences/edit?ref_=icp_cop_flyout_change&amp;preferencesReturnUrl=%2F" CVScreenId="3d3d2331-4575-43fd-bde3-b4ed29064a45" CvElementArea="162, 884, 391, 51" CvType="InputBox" DesignTimeRectangle="170, 893, 377, 36" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl parentid='icp-currency-dropdown-selected-item-prompt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='icp-currency-dropdown-selected-item-prompt' tag='SPAN' type='' class='a-button-inner' aaname='' check:innerText='£ - GBP - British Pound' /&gt;" Guid="73027954-dc14-4e4a-9b00-f19e5898205a" ImageBase64="" InformativeScreenshot="cbb0b0e0468d4cd67d80036d277be0ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NSelectItem.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NSelectItem>
+                          <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'INPUT'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" OutUiElement="[ui_SaveChanges]" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NMouseScroll.SearchedElement>
+                              <uix:SearchedElement>
+                                <uix:SearchedElement.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.amazon.com/customer-preferences/edit?ref_=icp_cop_flyout_change&amp;preferencesReturnUrl=%2FOfficemate-26092-Letter-Recycled-Black%2Fdp%2FB003G4MNUW%2F%3F_encoding%3DUTF8%26_ref%3Ddlx_gate_sd_dcl_tlt_59c541b0_dt%26pd_rd_w%3DjLN8Q%26content-id%3Damzn1.sym.81a68cec-8afc-4296-99f7-78cf5ddc15b5%26pf_rd_p%3D81a68cec-8afc-4296-99f7-78cf5ddc15b5%26pf_rd_r%3D2QVJ5A934TS0CZGC7TJR%26pd_rd_wg%3DqJq5x%26pd_rd_r%3D91a44954-47ba-4559-9e57-788901623031%26ref_%3Dpd_gw_unk" CVScreenId="02cafe6f-9dc6-496d-adbb-c08ac1c16707" CvElementArea="255, 724, 135, 43" CvTextArea="271, 736, 102, 20" CvTextArgument="Save Changes" CvType="Button" DesignTimeRectangle="258, 729, 128, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='icp-save-button-announce' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='icp-save-button-announce' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="75477a3a-767a-492e-a3cf-cb774df85d46" InformativeScreenshot="db075cf07db73ffa4fcb2f8c7b03e389.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://m.media-amazon.com/images/I/11EIQ5IGqaL._RC%7C01e5ncglxyL.css,01lF2n-pPaL.css,412sHz-V95L.css,31ASPyl+r4L.css,01GZEvC5WIL.css,11GEPqXartL.css,01qPl4hxayL.css,01ITNc8rK9L.css,413Vvv3GONL.css,11TIuySqr6L.css,01Rw4F+QU6L.css,11j54vTBQxL.css,01pbKJp5db*' title='Change Language &amp;amp; Currency Settings' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="02cafe6f-9dc6-496d-adbb-c08ac1c16707" CvElementArea="165, 724, 82, 43" CvTextArea="182, 736, 50, 16" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="170, 729, 75, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='icp-cancel-button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='icp-cancel-button' tag='A' type='' class='a-button-text' aaname='Cancel' check:innerText='Cancel' /&gt;" Guid="0353eb56-7984-41cf-a121-2c8cc0912077" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:SearchedElement.Target>
+                                <uix:SearchedElement.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:SearchedElement.Timeout>
+                              </uix:SearchedElement>
+                            </uix:NMouseScroll.SearchedElement>
+                            <uix:NMouseScroll.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/customer-preferences/edit?ref_=icp_cop_flyout_change&amp;preferencesReturnUrl=%2F" CVScreenId="b4828f97-22b2-4b9a-ba27-19b7ddc03964" CvElementArea="269, 989, 158, 43" CvTextArea="285, 1001, 126, 16" CvTextArgument="Guardar cambios" CvType="Button" DesignTimeRectangle="273, 994, 151, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-labelledby='icp-save-button-announce' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby='icp-save-button-announce' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="e41142b3-ca2d-4457-941e-c6bed1a701c4" InformativeScreenshot="603c5c9a24dc9fab9c44b489bdef07f5.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NMouseScroll.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NMouseScroll>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="10" DelayBefore="2" DisplayName="Click" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_6" InUiElement="[ui_SaveChanges]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'EN'" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="a04be3f4-fbcf-49ed-a71d-4dfcc1a366d7" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[bo_CheckTrue]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Amzcon Config ChechTrue = True&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[bo_CheckTrue]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.amazon.com/ref=nav_logo" CVScreenId="349cf077-82b7-42e2-9ab9-b2b44442bf26" CvTextArea="1475, 257, 22, 17" CvTextArgument="EN" CvType="Text" DesignTimeRectangle="1442, 256, 68, 24" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='nav-line-2' parentid='icp-nav-flyout' tag='SPAN' visibleinnertext='EN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='nav-line-2' parentid='icp-nav-flyout' tag='SPAN' type='' aaname='                                    ' check:innerText='EN' /&gt;" Guid="e357fc92-3d6d-4937-8f2a-3c1646030309" InformativeScreenshot="f929c72e5514b4213a097fad098521d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="-9, -9, 1938, 1060" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="9143364c36699381ce9d260611bee7fc.jpg" Selector="&lt;html app='chrome.exe' title='*' /&gt;" Title="Amazon.com. Spend less. Smile more." Url="[in_Config(&quot;Init_Webpage&quot;).ToString]" />
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                </Sequence>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean">
+                <ui:CheckTrue DisplayName="Check True" ErrorMessage="[in_Config(&quot;RetryMessageError&quot;).ToString]" Expression="[bo_CheckTrue]" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="CheckTrue_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CheckTrue>
+              </ActivityFunc>
+            </ui:RetryScope.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:RetryScope>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="619.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="416,311.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[exception.Message+&quot; at &quot;+exception.Source]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

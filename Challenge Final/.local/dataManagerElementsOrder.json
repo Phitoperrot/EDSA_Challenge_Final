@@ -1,0 +1,317 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/Main_Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Productos&Sequence_1",
+        "CurrentIndex&Sequence_1",
+        "ui_Dismiss&Sequence_22",
+        "ui_SaveChanges&Sequence_22",
+        "str_Languaje&Sequence_22",
+        "ui_English&Sequence_22",
+        "ui_Languajes&Sequence_28",
+        "ui_Languaje&Sequence_28",
+        "str_Nombre&Sequence_6",
+        "str_Index&Sequence_6",
+        "str_Precio&Sequence_6",
+        "str_Detail&Sequence_6",
+        "str_Url&Sequence_6",
+        "br_Amazon&Sequence_6",
+        "str_ClpValue&Sequence_6",
+        "str_FreeDelivery&Sequence_6",
+        "bo_Stock&Sequence_8",
+        "list_UniqueClp&Sequence_8",
+        "str_PrecioClean&Sequence_10",
+        "bo_Matches&Sequence_12",
+        "get_VisibleInnertext&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ExecutionTime&StateMachine_1",
+        "str_TransactionReference&Sequence_53",
+        "str_ExScreenshotName&Sequence_45",
+        "str_DtProductos&Sequence_4",
+        "dt_Productos&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/Init_GetDatosBuscar(Autosaved).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Status&Sequence_3",
+        "str_FreeDelivery&Sequence_3",
+        "tr_AmazonProductQueueItem&Sequence_3",
+        "str_Name&Sequence_3",
+        "str_Url&Sequence_3",
+        "str_Price&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_DtProductos"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_ExecutionTime",
+        "out_DtProductos",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/Init_GetDatosBuscar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CurrentIndex&Sequence_2",
+        "tr_AmazonProductQueueItem&Sequence_3",
+        "str_Name&Sequence_3",
+        "str_Url&Sequence_3",
+        "str_Status&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_ExecutionTime",
+        "in_Config",
+        "out_DtProductos"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Init/Init_AmazonConfig.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bo_CheckTrue&TryCatch_1",
+        "ui_Dismiss&Sequence_2",
+        "ui_SaveChanges&Sequence_2",
+        "str_Languaje&Sequence_2",
+        "ui_English&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_ExecutionTime",
+        "out_Reference",
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_DtProductos",
+        "in_TransactionField2",
+        "in_TransactionField1",
+        "in_TransactionNumber",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Exception_Screenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "image&Sequence_2",
+        "ExScreenshotName&Sequence_2",
+        "str_numPersonal&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionField1",
+        "out_ExScreenshotName",
+        "in_ExScreenshotName",
+        "in_ExScreenshotFolderPath",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/Test_SendMail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/SendMail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_to_message",
+        "in_body_message",
+        "in_subject_message",
+        "in_Config",
+        "in_attachFile",
+        "in_to_display_message"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SendMailNotification.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "sstr_MessagePass&Sequence_52",
+        "str_MessageUsr&Sequence_52"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionField1",
+        "in_TransactionNumber",
+        "in_ExScreenshotName",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process_GetAmazonProductData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "br_Amazon&Sequence_19",
+        "bo_Stock&Sequence_3",
+        "list_UniqueClp&Sequence_3",
+        "str_PrecioClean&Sequence_4",
+        "str_FreeDelivery&Sequence_4",
+        "bo_Matches&Sequence_5",
+        "get_VisibleInnertext&Sequence_5",
+        "str_ClpValue&Sequence_5",
+        "str_Precio&Sequence_5",
+        "str_Detail&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionField2",
+        "in_TransactionNumber",
+        "in_TransactionField1",
+        "io_DtProductos",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "End/End_OuputDatosBuscar.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_dt_Productos"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
